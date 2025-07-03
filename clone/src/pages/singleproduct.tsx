@@ -34,9 +34,7 @@ export default function Singleproduct(){
         }
         case 'fetch_error':{
            return {
-           loading:false,
-           error:true,
-           data:[]
+           ...state, loading: false, error: true, data: [] 
             }  
         }
         default :{

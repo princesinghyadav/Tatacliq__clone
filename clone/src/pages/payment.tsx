@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Toaster, toaster } from "@/components/ui/toaster"
+ 
 export default function Success () {
   const [cartItems, setCartItems] = useState<any[]>([]);
   const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ export default function Success () {
       <h2 style={{ textAlign: "center" }}>Checkout Page</h2>
       {orderPlaced ? (
         <div style={{ textAlign: "center", marginTop: "20px", color: "green" }}>
-          <h3>🎉 Order Placed Successfully!  {random10DigitNumber}<Toaster/></h3>
+          <h3>🎉 Order Placed Successfully!  {random10DigitNumber}</h3>
         </div>
       ) : (
         <form onSubmit={handleSubmit} style={{ display: "flex", gap: "20px" }}>
