@@ -2,7 +2,7 @@
 import { Image,Flex ,Button} from "@chakra-ui/react"
 import { useState } from "react"
 
-export default function Slidecard({product }){
+export default function Slidecard({product }:any){
     const [card1,setCard1]=useState(0)
     const [card2,setCard2]=useState(1)
     const [card3,setCard3]=useState(2)

@@ -14,15 +14,15 @@ const initialState = {
   error: false,
   data: [],
 };
-
-const reducer = (state, action) => {
+type Action = { type: string; payload?: any };
+const reducer = (state:any, action :Action) => {
   switch (action.type) {
     case "fetch_loading":
       return { loading: true, error: false, data: [] };
     case "fetch_success":
       return { loading: false, error: false, data: action.payload };
     case "fetch_error":
-      return { loading: false, error: true, data: [] };
+      return {...state, loading: false, error: true, data: []  };
     default:
       throw new Error("Unknown action type");
   }

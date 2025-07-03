@@ -11,13 +11,13 @@ import Landing from "@/pages/landingpage";
 import Success from "@/pages/payment";
 import { Navigate } from "react-router-dom";
 
-
-function Pagewrapper({children}){
+type Props = { children: React.ReactNode };
+function Pagewrapper({children}:Props ){
   const {isLoggedIn}= useContext(Authcontext)
 
 // const isLog=false;
  
-   if(isLoggedIn){
+   if(!isLoggedIn){
       alert('To vist this page , first login.')
    return  <Navigate to="/login"/>
    }

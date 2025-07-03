@@ -1,27 +1,41 @@
-import { createContext, useState } from "react";
-import { Navigate } from "react-router-dom";
+ import { createContext, useState } from "react";
+import type { ReactNode } from "react";
 
-export const Authcontext= createContext()
+// 1. Define the type
+type AuthContextType = {
+  isLoggedIn: boolean;
+  login: () => void;
+  logout: () => void;
+};
 
- export function AuthProvider (props:any){
-const [isLoggedIn,setIsLoggedIn]= useState(true)
- 
+// 2. Create the context with a default value
+export const Authcontext = createContext<AuthContextType>({
+  isLoggedIn: false,
+  login: () => {},
+  logout: () => {},
+});
 
-const login=()=>{
-    setIsLoggedIn(false)
-    console.log(isLoggedIn)
-  
-  return  <Navigate to="/login"/>
-}
-const logout =()=>{
+// 3. Provider component
+type Props = {
+  children: ReactNode;
+};
+
+export function AuthProvider({ children }: Props) {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // default to not logged in
+
+  const login = () => {
     setIsLoggedIn(true);
-     
-}
+    console.log("Logged in:", isLoggedIn);
+  };
 
-    return (
-<Authcontext.Provider  value={{isLoggedIn,login,logout}}>
-    {props.children}
-</Authcontext.Provider>
+  const logout = () => {
+    setIsLoggedIn(false);
+    console.log("Logged out:", isLoggedIn);
+  };
 
-    )
+  return (
+    <Authcontext.Provider value={{ isLoggedIn, login, logout }}>
+      {children}
+    </Authcontext.Provider>
+  );
 }

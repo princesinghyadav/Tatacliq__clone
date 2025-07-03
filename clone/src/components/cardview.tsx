@@ -1,5 +1,5 @@
- import { Badge,Heading,Text,Box,Button,Card,HStack,Image, VStack} from "@chakra-ui/react";
-import { Toaster, toaster } from "@/components/ui/toaster"
+ import { Badge,Heading,Text,Box,Button,Card,HStack,Image} from "@chakra-ui/react";
+ 
 import { useNavigate } from "react-router";
 export const Singlepage = (item:any) => {
     const   {
@@ -91,7 +91,7 @@ const Navigate =useNavigate()
                 </Button>
    
             </HStack>
-     <Toaster />
+     
           </Card.Footer>
         </Box>
       </Card.Root>
