@@ -1,4 +1,4 @@
-<!-- # React + TypeScript + Vite
+# React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -51,9 +51,9 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
-``` -->
+```
 
-
+<!-- 
 # 🛍️ TataCliq Clone - E-Commerce Web App (MERN Stack)
 
 A fully responsive and visually appealing e-commerce web application inspired by the original TataCliq website. Built using the MERN stack, this clone replicates key functionalities and user experience of TataCliq with modern features, seamless UI/UX, and practical use of localStorage and routing.
@@ -158,4 +158,4 @@ npm run dev
 
 ## 📄 License
 
-This project is licensed under the MIT License - feel free to use and modify!
+This project is licensed under the MIT License - feel free to use and modify! -->
