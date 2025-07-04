@@ -10,7 +10,7 @@ import Login from "@/pages/login";
 import Landing from "@/pages/landingpage";
 import Success from "@/pages/payment";
 import { Navigate } from "react-router-dom";
-
+import NotFound from "@/pages/notfound";
 type Props = { children: React.ReactNode };
 function Pagewrapper({children}:Props ){
   const {isLoggedIn}= useContext(Authcontext)
@@ -60,7 +60,7 @@ export default function Routess  (){
                         <Success/>
                     </Pagewrapper>
                    } ></Route>
-
+                <Route path="*" element={<NotFound/>}></Route>
         </Routes>
         </div>
     )

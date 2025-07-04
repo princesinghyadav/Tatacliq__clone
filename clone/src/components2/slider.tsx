@@ -2,6 +2,7 @@ import upper from "../images/sliding1.json"
 import { Button } from "@chakra-ui/react"
 import { useState ,useEffect} from "react"
 
+
  export default function Slider(){
 const [count,setCount]=useState(0);
  
@@ -45,7 +46,8 @@ return  () => {
       style={{ height:"475px", margin: '0 auto', backgroundPosition:"center", backgroundSize:"cover", 
         width:'96%',backgroundImage:`URL(${upper[count].src})`, display:"flex" , flexDirection:"column",
         justifyContent:"space-around",  marginTop:"25px" 
-        }}>
+        }}
+         >
             <div style={{ display:"flex" , justifyContent:"space-between", paddingTop:"180px"}}>
                 <div><Button variant="outline" m={2} bg="white"  size={"2xl"} rounded={"full"}
                 onClick={Previous}

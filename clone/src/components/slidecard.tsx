@@ -1,6 +1,7 @@
 // import product from "../images/brandss.json"
 import { Image,Flex ,Button} from "@chakra-ui/react"
 import { useState } from "react"
+import { useNavigate } from "react-router"
 
 export default function Slidecard({product }:any){
     const [card1,setCard1]=useState(0)
@@ -9,6 +10,8 @@ export default function Slidecard({product }:any){
     const [card4,setCard4]=useState(3)
 const length   = product.length
 // console.log(product[0])
+const navigation = useNavigate()
+ 
     const Previous =()=>{
         setCard1(card1-1)
         setCard2(card2-1)
@@ -55,8 +58,11 @@ const length   = product.length
     
     return (
   <>
+  
+<div onClick={()=> navigation('/product')}></div>
   <div style={{display:"flex", justifyContent:"flex-end" ,marginTop:"85px"
-  }}>
+  
+   }}>
   <Button  onClick={Previous} variant="outline" 
         color="black" 
       colorPalette="blue"
@@ -69,7 +75,10 @@ const length   = product.length
        >&gt;</Button>
   </div>
 
-<div style={{ padding:"18px",height:"400px"}}>
+<div style={{ padding:"18px",height:"400px"}}
+ onClick={()=>navigation('/product')}
+>
+
     <Flex  >
         <div style={{margin:"12px",height:"400px"}}>
       <Image

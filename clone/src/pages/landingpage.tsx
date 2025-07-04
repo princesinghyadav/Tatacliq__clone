@@ -13,14 +13,13 @@ import Digi_dex from '@/components2/digi-dex'
 import Watch from "../components2/watch"
 import Framed from '@/components2/fully-framed'
 import Shine_on from '@/components2/shine-on'
-import { useNavigate } from 'react-router'
 // import { useEffect } from 'react'
 
 export default function Landing(){
-const navigation = useNavigate()
+
     return (
 <>
-<div onClick={()=> navigation('/product')}>
+
  <Slider/>
 <Category/> 
 <Bank/>
@@ -39,7 +38,7 @@ const navigation = useNavigate()
 </Container>
 
 
-</div>
+ 
 
 </>
     )     

@@ -82,7 +82,7 @@ const Login: React.FC = () => {
     const formErrors = validate();
    
     login()
-
+    nav('/')
 
     if (Object.keys(formErrors).length === 0) {
       console.log("Login Data:", formData);
