@@ -7,7 +7,7 @@ A fully responsive and visually appealing e-commerce web application inspired by
 
 ## 🔗 Live Demo
 
-()&#x20;
+(https://tatacliq-clone-isnb.vercel.app/)&#x20;
 
 ---
 
